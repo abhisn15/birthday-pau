@@ -83,8 +83,8 @@ main #countdown {
 .mynavbar .offcanvas-title {
 	font-family: "precious";
 	src: "./Precious.ttf";
-  color: black;
-  padding-top: 15px;
+	color: black;
+	padding-top: 15px;
 	font-size: 2.5rem;
 	font-weight: bold;
 }
@@ -99,7 +99,7 @@ main #countdown {
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-image: url(img/bg.png);
+	background-image: url(img/bg-second.png);
 	opacity: 0.5;
 	background-size: cover;
 	background-position: center;
@@ -107,7 +107,8 @@ main #countdown {
 }
 
 .home {
-	background-image: url(img/bg.png);
+	background-image: url(img/bg-second.png);
+	filter: brightness(90%);
 	background-size: cover;
 	min-height: 100vh;
 	margin-top: -6rem;
@@ -115,8 +116,8 @@ main #countdown {
 	padding-bottom: 5rem;
 }
 
-#abhi {
-	margin-top: 40px;
+#pauzia {
+	margin-top: 30px;
 }
 
 #countdown {
@@ -124,73 +125,70 @@ main #countdown {
 }
 
 .fireG {
-            position: absolute;
-            transform: translate(-50%, -50%);
-            width: 20px;
-            height: 200px;
-        }
+	position: absolute;
+	transform: translate(-50%, -50%);
+	width: 20px;
+	height: 200px;
+}
 
-        .fireCrBr {
-            position: absolute;
-            top: 0%;
-            left: 0%;
-            width: inherit;
-            height: inherit;
-            transform: rotate(calc((360deg / var(--bars)) * var(--barNumber)));
-        }
+.fireCrBr {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: inherit;
+	height: inherit;
+	transform: rotate(calc((360deg / var(--bars)) * var(--barNumber)));
+}
 
-        .fireCr {
-            position: absolute;
-            top: 0%;
-            left: 0%;
-            width: 20px;
-            height: 20px;
-            color: inherit;
-            background-color: currentColor;
-            border-radius: 50%;
-            filter: drop-shadow(0px 4px 15px currentColor);
-            transform: translateY(calc(100% * 10));
-            transition: 0.3s linear;
-            opacity: 0;
-        }
-        .celebrate .fireG.fired .fireCr {
-            animation: fireWork 2s linear var(--animationDelay,0s) 1 forwards;
-        }
-        
-        .celebrate {
-          background-color: #0000004f;
-        }
+.fireCr {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 20px;
+	height: 20px;
+	color: inherit;
+	background-color: currentColor;
+	border-radius: 50%;
+	filter: drop-shadow(0px 4px 15px currentColor);
+	transform: translateY(calc(100% * 10));
+	transition: 0.3s linear;
+	opacity: 0;
+}
+.celebrate .fireG.fired .fireCr {
+	animation: fireWork 2s linear var(--animationDelay, 0s) 1 forwards;
+}
 
-        .celebrate .button {
-          background-color: #0000004f;
-        }
+.celebrate {
+	background-color: #0000004f;
+}
 
-        @keyframes fireWork {
-            0%
-            {
-                transform: translateY(calc(30% * 10));
-                opacity: 1;
-            }
-            80%
-            {
-                opacity: 1;
-            }
-            100%
-            {
-                opacity: 0;
-                transform: translateY(calc(-60% * 10));
-            }            
-        }        
+.celebrate .button {
+	background-color: #0000004f;
+}
 
-        .fireCr::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 400%;
-            background-color: currentColor;
-            filter: blur(44px);
-            clip-path: polygon(0% 0%, 100% 0%, 60% 100%, 40% 100%);
-        }
+@keyframes fireWork {
+	0% {
+		transform: translateY(calc(30% * 10));
+		opacity: 1;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(calc(-60% * 10));
+	}
+}
+
+.fireCr::after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 400%;
+	background-color: currentColor;
+	filter: blur(44px);
+	clip-path: polygon(0% 0%, 100% 0%, 60% 100%, 40% 100%);
+}
 
 .home h2,
 .info h2,
@@ -204,14 +202,16 @@ main #countdown {
 	font-weight: bold;
 }
 
-.abhi h3 {
-	font-family: "Sacramento", cursive;
-	color: #444;
-	font-size: 3rem;
+.pauzia h3 {
+	font-family: "precious";
+	src: "./Precious.ttf";
+	color: #ffffff;
+	text-shadow: 3px 3px #000000;
+	font-size: 5rem;
 	margin-bottom: 1rem;
 }
 
-.abhi h4 {
+.pauzia h4 {
 	color: #444;
 	font-size: 1.6rem;
 	margin-bottom: 1rem;
@@ -337,15 +337,15 @@ main #countdown {
 }
 
 .button {
-  text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 20px;
-  color: black !important;
+	text-decoration: none;
+	padding: 10px 15px;
+	border-radius: 20px;
+	color: black !important;
 }
 
 .button:hover {
-  background-color: rgb(190, 136, 18) !important;
-  color: white !important;
+	background-color: rgb(190, 136, 18) !important;
+	color: white !important;
 }
 
 .timeline li .timeline-panel {
@@ -414,6 +414,13 @@ main #countdown {
 	overflow: hidden;
 }
 
+.padbtn {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
 .kehadiran::before {
 	content: "";
 	position: absolute;
@@ -421,7 +428,8 @@ main #countdown {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: url(img/bg-kehadiran.jpg);
+	background-image: url(img/bg-kehadiran.png);
+	filter: brightness(80%);
 	z-index: -1;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -454,7 +462,7 @@ main #countdown {
 
 footer {
 	padding: 3rem;
-	background-color: var(--biru-dongker);
+	background-color: goldenrod;
 	color: white;
 }
 
@@ -472,6 +480,10 @@ footer li {
 	list-style: none;
 	display: inline;
 	margin: 0.5rem;
+}
+
+.buttonm {
+	margin-top: 35px !important;
 }
 
 .audio-icon-wrapper {
@@ -512,15 +524,19 @@ footer li {
 		width: 600px;
 	}
 
-  main #countdown {
-    width: 80%;
-  }
+	main #countdown {
+		width: 80%;
+	}
 }
 
 /* laptop */
 @media (max-width: 992px) {
 	html {
 		font-size: 75%;
+	}
+
+	.buttonm {
+		margin-top: 30px !important;
 	}
 
 	.simply-countdown > .simply-section {
@@ -567,6 +583,18 @@ footer li {
 
 /* tablet */
 @media (max-width: 768px) {
+	.padbtn {
+		width: 100%;
+	}
+	.buttonm {
+		margin-top: 20px !important;
+	}
+	main #countdown {
+		text-align: center;
+		width: 90%;
+		font-size: 12px;
+	}
+
 	html {
 		font-size: 65%;
 	}
@@ -645,8 +673,8 @@ footer li {
 	}
 
 	main #countdown {
-    text-align: center;
-    width: 90%;
+		text-align: center;
+		width: 90%;
 		font-size: 12px;
 	}
 
